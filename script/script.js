@@ -1,3 +1,16 @@
+const allCards = document.getElementById('allCards');
+
+// total count
+let total = document.getElementById('totalCount');
+let interviewCount = document.getElementById('interviewCount');
+let rejectedCount = document.getElementById('rejectedCount');
+
+// total count function
+function totalCount() {
+  total.innerText = allCards.children.length
+}
+
+totalCount();
 
 // toggle filter button
 const allFilterBtn = document.getElementById('allBtn');

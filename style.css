@@ -1,0 +1,20 @@
+@media (max-width: 650px) {
+  .main-title {
+    text-align: center;;
+  }
+
+  .dashboard-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dashboard-card{
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    width: 100%;
+  }
+
+}

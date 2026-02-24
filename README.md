@@ -1,4 +1,7 @@
-```markdown ( Text Formatting মার্কডাউন (AI) দিয়ে করছি, যাতে দেখতে সুন্দর লাগে। )
+```markdown
+
+### ( Text Formatting মার্কডাউন (AI) দিয়ে করছি, যাতে দেখতে সুন্দর লাগে। )
+
 ### Q&A 
 ### 1. Whats the diffrence between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
 - **`getElementById`**: Returns a single elment matchin the specific ID. It is the speediest method but limited to IDs.

@@ -62,18 +62,16 @@ function toggleStyle(id) {
     activeFilter = 'interview';
     allCards.classList.add('hidden');
     renderJob('interview');
-  }
-  else if (id === 'rejectedBtn') {
+  } else if (id === 'rejectedBtn') {
     activeFilter = 'rejected';
     allCards.classList.add('hidden');
     renderJob('rejected');
-  }
-  else {
+  } else {
     activeFilter = 'all';
     allCards.classList.remove('hidden');
     noJobSection.classList.add('hidden');
     // Hide filtered section when 'all' is active
-    filteredSection.classList.add('hidden'); 
+    filteredSection.classList.add('hidden');
   }
   // Update counts and job text after filter change
   updateCounts();
@@ -122,7 +120,6 @@ function updateJobStatus(interviewCard, cardStatus) {
     status.innerText = 'INTERVIEW';
     status.classList.add('bg-green-300');
     status.classList.remove('bg-red-300');
-
 
     interviewCardBtn.classList.add('bg-green-500', 'text-white');
     interviewCardBtn.classList.remove('text-green-500');
@@ -200,6 +197,11 @@ function deleteCard(interviewCard) {
   rejected = rejected.filter(item => item.title !== title);
 
   interviewCard.remove();
+
+  if (allCards.children.length === 0) {
+    showEmptyCard();
+  }
+
   updateCounts();
 }
 

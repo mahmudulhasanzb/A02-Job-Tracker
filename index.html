@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Job Tracker</title>
-    
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
-    
-    <!-- style -->
-    <style>
-      * {
-        font-family: 'Geist', sans-serif;
-      }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Tracker</title>
 
-    <!-- DaisyUI -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
 
-    <!-- custom css -->
-    <link rel="stylesheet" href="style.css">
+  <!-- style -->
+  <style>
+    * {
+      font-family: 'Geist', sans-serif;
+    }
+  </style>
+
+  <!-- DaisyUI -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- custom css -->
+  <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body class="bg-base-200">
   <!-- dashboard section -->
-   <header class="w-[80%] mx-auto">
+  <header class="w-[80%] mx-auto">
     <!-- dashboard title -->
     <h2 class="text-2xl font-bold py-5 text-[#002C5C] ">Job Application Tracker</h2>
     <!-- dashboard container -->
@@ -53,24 +55,24 @@
       </div>
 
     </div>
-   </header>
+  </header>
 
   <hr class="w-[80%] mx-auto border-gray-300 my-5">
 
-   <main id="mainContainer" class="w-[80%] mx-auto">
+  <main id="mainContainer" class="w-[80%] mx-auto">
 
     <!-- filter section -->
     <section class="space-y-5 mt-5 mb-5">
       <div class="flex justify-between items-center">
         <h2 class="text-xl font-bold text-[#002C5C]">Avaliable Jobs</h2>
-        <p id="jobs" class="text-xsm font-bold text-gray-500">0</p>
+        <p id="jobs" class="text-xsm font-bold text-gray-500">0 jobs</p>
       </div>
 
       <!-- filter buttons -->
       <div class="flex gap-2">
-        <button onclick="toggleStyle('allBtn')" id="allBtn" class="btn btn-primary">All</button>  
-        <button onclick="toggleStyle('interviewBtn')" id="interviewBtn" class="btn">Interview</button>  
-        <button onclick="toggleStyle('rejectedBtn')" id="rejectedBtn" class="btn">Rejected</button>  
+        <button onclick="toggleStyle('allBtn')" id="allBtn" class="btn btn-primary">All</button>
+        <button onclick="toggleStyle('interviewBtn')" id="interviewBtn" class="btn">Interview</button>
+        <button onclick="toggleStyle('rejectedBtn')" id="rejectedBtn" class="btn">Rejected</button>
       </div>
     </section>
 
@@ -88,160 +90,61 @@
     </section>
 
     <!-- Filter Card  -->
-    <section id="filtered-section" class="space-y-10 my-[60px] hidden"><h1>sdfl;kjs</h1></section>
+    <section id="filtered-section" class="space-y-10 my-[60px] hidden">
+      <!-- it will be populated dynamically -->
+    </section>
 
     <!-- job container -->
     <section id="allCards" class="job-container space-y-5">
       <!-- card-1 -->
-      <div onclick="deleteCard('card1')" id="card1" class="card bg-base-100 card-border p-5">
+      <div class="interview-card bg-base-100 card-border p-5">
         <div class="flex justify-between">
           <div>
-            <h2 class="text-xl font-bold text-[#002C5C]">Mobile First Corp</h2>
-            <p class="text-gray-500">React Native Developer</p>
-            <p class="text-gray-500 mt-2 mb-3">Remote . Fulp-time . $1000-$1500</p>
-            <p class="text-[#002C5C] text-sm font-bold bg-[#002c5c24] px-2 py-1 rounded-md w-fit">NOT APPLIED</p>
+            <h2 class="title text-xl font-bold text-[#002C5C]">Mobile First Corp1</h2>
+            <p class="position text-gray-500">React Native Developer</p>
+            <p class="type text-gray-500 mt-2 mb-3">Remote . Full-time . $1000-$1500</p>
+            <p class="status-1 text-[#002C5C] text-sm font-bold bg-[#002c5c24] px-2 py-1 rounded-md w-fit">NOT APPLIED
+            </p>
           </div>
-          <button id="deleteBtn" class="btn rounded-[100%] w-12 h-12 flex items-center justify-center"><img src="./assest/Trash.png"></button>
+          <button class="delete-btn btn rounded-[100%] w-12 h-12 flex items-center justify-center"><img
+              src="./assest/Trash.png"></button>
         </div>
-        <p class="mt-2 mb-4">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide</p>
+        <p class="description mt-2 mb-4">Build cross-platform mobile applications using React Native. Work on products used by
+          millions of users worldwide</p>
 
         <div class="flex gap-2">
-          <button id="interviewBtn" class="btn text-green-500 border border-green-500">Interview</button>
-          <button id="rejectedBtn" class="btn text-red-500 border border-red-500">Rejected</button>
+          <button class="interview-card-btn btn text-green-500 border border-green-500">Interview</button>
+          <button class="rejected-card-btn btn text-red-500 border border-red-500">Rejected</button>
         </div>
       </div>
+
       <!-- card-2 -->
-      <div onclick="deleteCard('card2')" id="card2" class="card bg-base-100 card-border p-5">
+      <div class="interview-card bg-base-100 card-border p-5">
         <div class="flex justify-between">
           <div>
-            <h2 class="text-xl font-bold text-[#002C5C]">Mobile First Corp</h2>
-            <p class="text-gray-500">React Native Developer</p>
-            <p class="text-gray-500 mt-2 mb-3">Remote . Fulp-time . $1000-$1500</p>
-            <p class="text-[#002C5C] text-sm font-bold bg-[#002c5c24] px-2 py-1 rounded-md w-fit">NOT APPLIED</p>
+            <h2 class="title text-xl font-bold text-[#002C5C]">Tech Innovators</h2>
+            <p class="position text-gray-500">Frontend Developer</p>
+            <p class="type text-gray-500 mt-2 mb-3">Hybrid . Full-time . $1200-$1800</p>
+            <p class="status-1 text-[#002C5C] text-sm font-bold bg-[#002c5c24] px-2 py-1 rounded-md w-fit">NOT APPLIED
+            </p>
           </div>
-          <button id="deleteBtn" class="btn rounded-[100%] w-12 h-12 flex items-center justify-center"><img src="./assest/Trash.png"></button>
+          <button class="delete-btn btn rounded-[100%] w-12 h-12 flex items-center justify-center"><img
+              src="./assest/Trash.png"></button>
         </div>
-        <p class="mt-2 mb-4">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide</p>
+        <p class="description mt-2 mb-4">Work with modern web technologies like React and Tailwind CSS to build beautiful user
+          interfaces.</p>
 
         <div class="flex gap-2">
-          <button id="interviewBtn" class="btn text-green-500 border border-green-500">Interview</button>
-          <button id="rejectedBtn" class="btn text-red-500 border border-red-500">Rejected</button>
+          <button class="interview-card-btn btn text-green-500 border border-green-500">Interview</button>
+          <button class="rejected-card-btn btn text-red-500 border border-red-500">Rejected</button>
         </div>
       </div>
-      <!-- card-3 -->
-      <div onclick="deleteCard('card3')" id="card3" class="card bg-base-100 card-border p-5">
-        <div class="flex justify-between">
-          <div>
-            <h2 class="text-xl font-bold text-[#002C5C]">Mobile First Corp</h2>
-            <p class="text-gray-500">React Native Developer</p>
-            <p class="text-gray-500 mt-2 mb-3">Remote . Fulp-time . $1000-$1500</p>
-            <p class="text-[#002C5C] text-sm font-bold bg-[#002c5c24] px-2 py-1 rounded-md w-fit">NOT APPLIED</p>
-          </div>
-          <button id="deleteBtn" class="btn rounded-[100%] w-12 h-12 flex items-center justify-center"><img src="./assest/Trash.png"></button>
-        </div>
-        <p class="mt-2 mb-4">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide</p>
-
-        <div class="flex gap-2">
-          <button id="interviewBtn" class="btn text-green-500 border border-green-500">Interview</button>
-          <button id="rejectedBtn" class="btn text-red-500 border border-red-500">Rejected</button>
-        </div>
-      </div>
-      <!-- card-4 -->
-      <div onclick="deleteCard('card4')" id="card4" class="card bg-base-100 card-border p-5">
-        <div class="flex justify-between">
-          <div>
-            <h2 class="text-xl font-bold text-[#002C5C]">Mobile First Corp</h2>
-            <p class="text-gray-500">React Native Developer</p>
-            <p class="text-gray-500 mt-2 mb-3">Remote . Fulp-time . $1000-$1500</p>
-            <p class="text-[#002C5C] text-sm font-bold bg-[#002c5c24] px-2 py-1 rounded-md w-fit">NOT APPLIED</p>
-          </div>
-          <button id="deleteBtn" class="btn rounded-[100%] w-12 h-12 flex items-center justify-center"><img src="./assest/Trash.png"></button>
-        </div>
-        <p class="mt-2 mb-4">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide</p>
-
-        <div class="flex gap-2">
-          <button id="interviewBtn" class="btn text-green-500 border border-green-500">Interview</button>
-          <button id="rejectedBtn" class="btn text-red-500 border border-red-500">Rejected</button>
-        </div>
-      </div>
-      <!-- card-5 -->
-      <div onclick="deleteCard('card5')" id="card5" class="card bg-base-100 card-border p-5">
-        <div class="flex justify-between">
-          <div>
-            <h2 class="text-xl font-bold text-[#002C5C]">Mobile First Corp</h2>
-            <p class="text-gray-500">React Native Developer</p>
-            <p class="text-gray-500 mt-2 mb-3">Remote . Fulp-time . $1000-$1500</p>
-            <p class="text-[#002C5C] text-sm font-bold bg-[#002c5c24] px-2 py-1 rounded-md w-fit">NOT APPLIED</p>
-          </div>
-          <button id="deleteBtn" class="btn rounded-[100%] w-12 h-12 flex items-center justify-center"><img src="./assest/Trash.png"></button>
-        </div>
-        <p class="mt-2 mb-4">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide</p>
-
-        <div class="flex gap-2">
-          <button id="interviewBtn" class="btn text-green-500 border border-green-500">Interview</button>
-          <button id="rejectedBtn" class="btn text-red-500 border border-red-500">Rejected</button>
-        </div>
-      </div>
-      <!-- card-6 -->
-      <div onclick="deleteCard('card6')" id="card6" class="card bg-base-100 card-border p-5">
-        <div class="flex justify-between">
-          <div>
-            <h2 class="text-xl font-bold text-[#002C5C]">Mobile First Corp</h2>
-            <p class="text-gray-500">React Native Developer</p>
-            <p class="text-gray-500 mt-2 mb-3">Remote . Fulp-time . $1000-$1500</p>
-            <p class="text-[#002C5C] text-sm font-bold bg-[#002c5c24] px-2 py-1 rounded-md w-fit">NOT APPLIED</p>
-          </div>
-          <button id="deleteBtn" class="btn rounded-[100%] w-12 h-12 flex items-center justify-center"><img src="./assest/Trash.png"></button>
-        </div>
-        <p class="mt-2 mb-4">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide</p>
-
-        <div class="flex gap-2">
-          <button id="interviewBtn" class="btn text-green-500 border border-green-500">Interview</button>
-          <button id="rejectedBtn" class="btn text-red-500 border border-red-500">Rejected</button>
-        </div>
-      </div>
-      <!-- card-7 -->
-      <div onclick="deleteCard('card7')" id="card7" class="card bg-base-100 card-border p-5">
-        <div class="flex justify-between">
-          <div>
-            <h2 class="text-xl font-bold text-[#002C5C]">Mobile First Corp</h2>
-            <p class="text-gray-500">React Native Developer</p>
-            <p class="text-gray-500 mt-2 mb-3">Remote . Fulp-time . $1000-$1500</p>
-            <p class="text-[#002C5C] text-sm font-bold bg-[#002c5c24] px-2 py-1 rounded-md w-fit">NOT APPLIED</p>
-          </div>
-          <button id="deleteBtn" class="btn rounded-[100%] w-12 h-12 flex items-center justify-center"><img src="./assest/Trash.png"></button>
-        </div>
-        <p class="mt-2 mb-4">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide</p>
-
-        <div class="flex gap-2">
-          <button id="interviewBtn" class="btn text-green-500 border border-green-500">Interview</button>
-          <button id="rejectedBtn" class="btn text-red-500 border border-red-500">Rejected</button>
-        </div>
-      </div>
-      <!-- card-8 -->
-      <div onclick="deleteCard('card8')" id="card8" class="card bg-base-100 card-border p-5">
-        <div class="flex justify-between">
-          <div>
-            <h2 class="text-xl font-bold text-[#002C5C]">Mobile First Corp</h2>
-            <p class="text-gray-500">React Native Developer</p>
-            <p class="text-gray-500 mt-2 mb-3">Remote . Fulp-time . $1000-$1500</p>
-            <p class="text-[#002C5C] text-sm font-bold bg-[#002c5c24] px-2 py-1 rounded-md w-fit">NOT APPLIED</p>
-          </div>
-          <button id="deleteBtn" class="btn rounded-[100%] w-12 h-12 flex items-center justify-center"><img src="./assest/Trash.png"></button>
-        </div>
-        <p class="mt-2 mb-4">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide</p>
-
-        <div class="flex gap-2">
-          <button id="interviewBtn" class="btn text-green-500 border border-green-500">Interview</button>
-          <button id="rejectedBtn" class="btn text-red-500 border border-red-500">Rejected</button>
-        </div>
-      </div>
-
     </section>
 
-   </main>
+  </main>
 
   <!-- script -->
-   <script src="./script/script.js"></script>
+  <script src="./script/script.js"></script>
 </body>
+
 </html>

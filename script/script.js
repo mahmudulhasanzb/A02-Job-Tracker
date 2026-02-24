@@ -183,7 +183,7 @@ function renderJob(status) {
               src="./assest/Trash.png"></button>
                 </div>
                 <p class="description mt-2 mb-4">${job.description}</p>
-                <div class="flex gap-2">
+                <div class="flex gap-2 lg:flex-row md:flex-col">
           <button class="interview-card-btn btn text-green-500 border border-green-500">Interview</button>
           <button class="rejected-card-btn btn text-red-500 border border-red-500">Rejected</button>
         </div>

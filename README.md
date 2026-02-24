@@ -1,83 +1,27 @@
-## Welcome To ( সহজ সরল সিম্পল ) Assignment - 4 
+```markdown ( Text Formatting মার্কডাউন (AI) দিয়ে করছি, যাতে দেখতে সুন্দর লাগে। )
+### Q&A 
+### 1. Whats the diffrence between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
+- **`getElementById`**: Returns a single elment matchin the specific ID. It is the speediest method but limited to IDs.
+- **`getElementsByClassName`**: Returns a live `HTMLCollection` of all elments with the given class name.
+- **`querySelector`**: Returns the first elment that matches a specified CSS selector (ID, class, tag, etc.).
+- **`querySelectorAll`**: Returns a static `NodeList` of all elements matchin the CSS selector.
+
+### 2. How do u create and insert a new elment into the DOM?
+1. **Create**: Use `document.createElement('tagName')`.
+2. **Config**: Set attributes or content (ex: `el.textContent = 'Hello'`).
+3. **Insert**: Use methods like `appendChild()`, `prepend()`, `before()`, or `after()` on a parent or sibling element.
+
+### 3. What is Event Bubling? And how does it work?
+Event bubling is a phase of event propagation where an event triggers on the innermost target elment and then moves up to its ancestors (parents) in the DOM tree until it reaches the `window` object.
+
+### 4. What is Event Delegation in JS? Why is it useful?
+Event delegation is a technique where a single event listener is added to a parent element to manage events for all of its current and future kids. It leverages event bubbling to identify which child triggered the event using `event.target`.
+- **Why it's useful**: It improves performance by reducin the number of event listeners and handles elements added to the DOM later.
+
+### 5. What is the diffrence between preventDefault() and stopPropagation() methods?
+- **`preventDefault()`**: Stops the browser's default action associated with the event (example: prevents a link from navigatin or a form from submittin).
+- **`stopPropagation()`**: Prevents the event from "bubling" up the DOM tree, ensurin that parent event handlers are not triggered.
+```
 
 
----
-# 📅 Deadline For 60 marks: 23th February, 2026 (11:59 pm ⏱️)
-# 📅 Deadline For 50 marks: 24th February, 2026 (11:59 pm ⏱️)
-# 📅 Deadline For 30 marks: Any time after 24th February.
 
-
-# Main Requirements
-
-## Design Part
-
-## Dashboard
-- Website name and Create a dashboard like figma 
-- The section should be responsive for mobile devices. It is totally up to you. 
-
-## Available Jobs Section
-- A title on the left side, jobs count on the right side 
-- 3 different tab  below the section title 
-- Minimum 8 cards with:
-	- companyName
-	- position
-	- location
-	- type
-	- salary
-	- description
-	- 2 buttons: Interview, Rejected
-- By default all the jobs data will show on All tab, and the Interview, Rejected tab will show “No jobs Available” message with a subtitle below and an icon/image on the above
-
-- The section should be responsive for mobile devices. It is totally up to you.
-
---- 
-
-## Functionalities Part
-- Clicking on Interview button on the card 
-    - will add the data on Interview tab 
-    - add the status as Interview.
-    - Will increase the the count of interview in Dashboard 
-
-- Clicking on Rejected button on the card 
-    - will add the data on Rejected tab 
-    - add the status as Rejected.
-    - Will increase the the count of Rejected in Dashboard
-
-- Enable toggle between Interview and rejected button(you can select Rejected button after clicking on Interview, and Interview button after clicking on Rejected button). It will change the tab and dashboard count also. It will show tab wise jobs count on the right.
-
----
-
-# Challenges Requirements
-- Clicking on the delete button will remove that card from the UI, and the count will be deducted from the dashboard card and the main section.
-- No lorem ipsum text on your website. At least 8 meaningful commits in your project.  
-
-- Create a readme file and answer this question on your own. Don’t copy-paste from Google or any AI chatbot. 
-
-
-## Answers to Questions
-
-### 1. What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
-
-### 2. How do you create and insert a new element into the DOM?
-
-### 3. What is Event Bubbling? And how does it work?
-
-### 4. What is Event Delegation in JavaScript? Why is it useful?
-
-### 5. What is the difference between preventDefault() and stopPropagation() methods?
-
----
-
-
-**Technology Stack:**
-- HTML
-- CSS (Vanilla/Tailwind/DaisyUI)
-- JavaScript (Vanilla)
-
-
---- 
-
-## What to submit: 
-
-1. GitHub Repository Link: 
-2. Live Site Link: 
